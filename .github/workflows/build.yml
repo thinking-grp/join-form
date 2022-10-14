@@ -1,0 +1,27 @@
+name: Main
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19.1
+      - name: Build
+        run: |
+          bash build.sh
+          mv main joinform
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            build/jsonform-win-amd64.exe
+            build/jsonform-win-arm64.exe
+            build/jsonform-linux-amd64
+            build/jsonform-linux-arm64
+            build/jsonform-mac-amd64
+            build/jsonform-mac-arm64
