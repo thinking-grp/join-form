@@ -24,3 +24,5 @@ jobs:
             build/jsonform-linux-arm64
             build/jsonform-mac-amd64
             build/jsonform-mac-arm64
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
