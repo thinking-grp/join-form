@@ -1,7 +1,9 @@
 name: Main
 
-on: [push]
-
+on:
+  push:
+    branches:    
+      - 'releases/**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,4 +27,4 @@ jobs:
             build/jsonform-mac-amd64
             build/jsonform-mac-arm64
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
