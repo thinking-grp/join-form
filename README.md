@@ -6,8 +6,8 @@ When someone apply to join a group, you will know it via Discord WebHook
 
 ### 💨 Run this application
 
-1, Download binary of your environment from [release](https://github.com/thinking-grp/join-form/releases)
-2, Rename binary to joinform
+1, Download binary of your environment from [release](https://github.com/thinking-grp/join-form/releases)  
+2, Rename binary to joinform  
 3, Running this
 
 ```bash
