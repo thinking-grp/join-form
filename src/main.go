@@ -86,7 +86,7 @@ func postJoin(c echo.Context) error {
 }
 
 func readConfig() string {
-	var configPath string = filepath.Join("src", "/config.json")
+	var configPath string = filepath.Join("config.json")
 
 	f, err := os.Open(configPath)
 	if err != nil {
